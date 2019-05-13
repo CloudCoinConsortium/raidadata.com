@@ -1,0 +1,1 @@
+RAILS_ENV=static rails static:generate
