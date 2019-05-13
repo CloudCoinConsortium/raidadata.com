@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RaidadataCom</title>
+    <title>RAIDAdata</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="RAIDA,RAIDATech,CloudCoin,BitShares,exchange,Cloud Currency">
+    <meta name="description" content="RAIDAData is the next generation data transfer and authentication">
+    <meta name="subject" content="">
+    <meta name="copyright"content="RAIDATech">
+    <meta name="language" content="EN">
+    <meta name="topic" content="">    
+    <meta name="author" content="Dipen Chauhan, info@cloudcoin.global">
+    <meta name="designer" content="Dipen Chauhan">
+    <meta name="reply-to" content="support@raidatech.com">
+    <meta name="coverage" content="Worldwide">
+    <meta name="distribution" content="Global">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +23,8 @@
   </head>
 
   <body>
+    <%= render "layouts/header" %>
     <%= yield %>
+    <%= render "layouts/footer" %>
   </body>
 </html>
