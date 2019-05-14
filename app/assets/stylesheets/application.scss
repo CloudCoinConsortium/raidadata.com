@@ -10,6 +10,149 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
+ * Use @import to import Sass files. Do not use *= require in Sass or your other 
+ * stylesheets will not be able to access the Bootstrap mixins and variables.
  */
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "animate.min";
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+$background: #0c0e27;
+$background: #005444;
+$base: 0.6rem;
+$text-color: white;
+$sans-serif: 'Lato', sans-serif;
+html {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background-color: $background;
+  font-size: 16px;
+  line-height: 30px;
+  font-family: $sans-serif;
+  color: $text-color;
+}
+main {
+  flex: 1;
+}
+section {
+  padding: 6.25em 0;
+}
+
+/*===================================*
+02. HEADER
+*===================================*/
+.navbar {
+  .navbar-brand {
+    margin: 0;
+    padding: 0;
+    // font-size: 1.6em;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    display: flex;
+    align-items: center;
+    img {
+      max-height: 70px;
+      display: block;
+      padding-right: 5px;
+    }
+    .name {
+      // border-top: 3px solid white;
+      // border-bottom: 3px solid white;
+      padding: 5px;
+      display: block;
+      font-size: 20px;
+    }
+  }
+}
+
+/*===================================*
+03. HOME
+*===================================*/
+#home {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-image: linear-gradient(to bottom right, #005744, #003b3e, #00323c, #003b3e, #005744);
+  background: linear-gradient(270deg, rgba(0, 87, 68,1) 0%, rgba(	0, 59, 62, 1) 25%, rgba(0, 50, 60,1) 50%, rgba(0,87,68,1) 100%);
+  display: flex;
+  align-items: center;
+}
+
+.chevron {
+  position: absolute;
+  width: $base * 3.5;
+  height: $base * 0.8;
+  opacity: 0;
+  transform: scale(0.3);
+  animation: move-chevron 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move-chevron 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move-chevron 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+ content: '';
+ position: absolute;
+ top: 0;
+ height: 100%;
+ width: 50%;
+ background: #00f1bc;
+}
+
+.chevron:before {
+ left: 0;
+ transform: skewY(30deg);
+}
+
+.chevron:after {
+ right: 0;
+ width: 50%;
+ transform: skewY(-30deg);
+}
+
+@keyframes move-chevron {
+ 25% {
+  opacity: 1;
+	}
+ 33.3% {
+  opacity: 1;
+  transform: translateY($base * 3.8);
+ }
+ 66.6% {
+  opacity: 1;
+  transform: translateY($base * 5.2);
+ }
+ 100% {
+  opacity: 0;
+  transform: translateY($base * 8) scale(0.5);
+ }
+}
+
+/*===================================*
+04. ABOUT
+*===================================*/
+#about {
+  h4 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+  }
+  p {
+     margin-bottom: 30px;
+  }
+}
