@@ -17,7 +17,7 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "animate.min";
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 $background: #0c0e27;
 $background: #005444;
 $base: 0.6rem;
@@ -43,6 +43,13 @@ main {
 }
 section {
   padding: 6.25em 0;
+
+  h4 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
 }
 
 /*===================================*
@@ -81,7 +88,7 @@ section {
   overflow: hidden;
   position: relative;
   background-image: linear-gradient(to bottom right, #005744, #003b3e, #00323c, #003b3e, #005744);
-  background: linear-gradient(270deg, rgba(0, 87, 68,1) 0%, rgba(	0, 59, 62, 1) 25%, rgba(0, 50, 60,1) 50%, rgba(0,87,68,1) 100%);
+  background: linear-gradient(270deg, rgba(0, 87, 68,1) 0%, rgba( 0, 59, 62, 1) 25%, rgba(0, 50, 60,1) 50%, rgba(0,87,68,1) 100%);
   display: flex;
   align-items: center;
 }
@@ -127,7 +134,7 @@ section {
 @keyframes move-chevron {
  25% {
   opacity: 1;
-	}
+  }
  33.3% {
   opacity: 1;
   transform: translateY($base * 3.8);
@@ -145,14 +152,21 @@ section {
 /*===================================*
 04. ABOUT
 *===================================*/
-#about {
-  h4 {
-    font-size: 26px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    text-transform: capitalize;
-  }
+.light-bg {
+  background: #008a6c;
+  // color: #b8ffef;
+  color: #fff;
+}
+#about-raidadata, #about-raida {
+  
   p {
      margin-bottom: 30px;
   }
+}
+
+/*===================================*
+05. SOLUTIONS
+*===================================*/
+#solutions {
+  
 }
